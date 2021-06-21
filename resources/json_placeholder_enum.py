@@ -2,5 +2,5 @@ import enum
 
 
 class PlaceholderEnum(enum.Enum):
-    JsonPosts = "https://jsonplaceholder.typicode.com/posts"
-
+    JsonPost = "https://jsonplaceholder.typicode.com/posts"
+    JsonPut = "https://jsonplaceholder.typicode.com/posts/1"

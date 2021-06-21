@@ -3,18 +3,17 @@ import pytest
 from resources.json_placeholder_enum import PlaceholderEnum
 
 
-@pytest.mark.jsonplaceholdertest
-def test_validate_response_code():
-    response = requests.get(PlaceholderEnum.JsonPosts.value)
-    assert response.status_code == 200
-    assert 'application/json; charset=utf-8' in response.headers["Content-Type"]
+@pytest.mark.jsonplaceholdertestpost
+def test_post_request():
+    my_obj ={
+        "userId": 1,
+        "id": 1,
+        "title": "my title",
+        "body": "body example"
+    }
+    response = requests.post(PlaceholderEnum.JsonPost.value, data=my_obj)
+    assert response.status_code == 201
 
 
-@pytest.mark.jsonplaceholdertest
-def test_validate_userid_and_id():
-    response = requests.get(PlaceholderEnum.JsonPosts.value)
-    assert response.status_code == 200
-    assert 'application/json; charset=utf-8' in response.headers["Content-Type"]
-    data = response.json()
-    assert data[0]['userId'] == 1
-    assert data[0]['id'] == 1
+
+
