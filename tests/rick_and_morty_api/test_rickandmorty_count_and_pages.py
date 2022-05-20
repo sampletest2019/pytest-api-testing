@@ -8,5 +8,5 @@ def test_validate_get_response_code():
     assert res.status_code == 200
     assert res.headers["Content-Type"] == "application/json; charset=utf-8"
     json_data = res.json()
-    assert json_data['info']['count'] == 26
+    assert json_data['info']['count'] == 29
     assert json_data['info']['pages'] == 2
