@@ -7,7 +7,6 @@ from resources.json_placeholder_enum import PlaceholderEnum
 def test_post_request():
     my_obj ={
         "userId": 1,
-        "id": 1,
         "title": "my title",
         "body": "body example"
     }

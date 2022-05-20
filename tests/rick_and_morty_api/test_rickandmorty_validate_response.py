@@ -6,6 +6,5 @@ import pytest
 def test_validate_get_response_code():
     response = requests.get("https://rickandmortyapi.com/api/character")
     assert response.status_code == 200
-    assert response.headers["Content-Type"] == "application/json; charset=utf-8"
 
 
